@@ -140,7 +140,9 @@ def getVersionCode(version) {
         buildType = 'test'
     }
 
-    def pattern = "v(\\d+)\\.(\\d+)\\.(\\d+)"
+    // 按《语义化版本 2.0.0》，开头不带v 。 TODO: 应严格按照《语义化版本 2.0.0》提供的正则匹配来确定。
+    // def pattern = "v(\\d+)\\.(\\d+)\\.(\\d+)"
+    def pattern = "(\\d+)\\.(\\d+)\\.(\\d+)"
     def matcher = version =~ pattern
 
     if (matcher) {
@@ -149,8 +151,11 @@ def getVersionCode(version) {
         def revisionNumber = Integer.parseInt(matcher[0][3])
 
         // 正式环境
+        // 注意：这里按本项目实际情况，minorNumber 和 revisionNumber 不超出 100 来计算。如果项目实际情况有更多的话，
+        // 自行调整。初步估计即使在临近处理，亦可以保证前后版本号不重复，且满足单调递增。
         def versionCode = majorNumber * 10000 + minorNumber * 100 + revisionNumber
         if (buildType.toLowerCase() != 'release') {
+            // 非正式环境带上一个基数
             versionCode = 9000000 + versionCode
         }
 

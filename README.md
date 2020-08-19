@@ -19,10 +19,10 @@ Gradle 构建时为应用模块设定版本、添加版本查询接口。
 * **SysController** 每个模块提供自己的版本查询接口。接口路径为 /sys/version 。这个接口已由 ResourceServerConfiguration 处理无需 token 即可访问
 
 ### 编译和使用
-（1） 每到发布新版本时，先在 ```gradle.properties``` 按版本管理和约定，指定当前版本号。
+（1） 每到发布新版本时，先在 ```gradle.properties``` 按版本号规范和约定，指定当前版本号。类似 2.9.0-hotfix.1 符合语义化版本的亦被支持（但这种要注意，它的整型版本号 versionCode 计算结果与 2.9.0 同）。
 
 <pre>
-version=v2.9.0
+version=2.9.0
 </pre>
 
 （2） build-all-projects.sh 直接运行 ```bash build-all-projects.sh``` 或参考其中的编译命令单独编译。
@@ -36,12 +36,20 @@ cd base-common; ./gradlew clean build -P build_type=release; cd ..
 cd trace-service; ./gradlew clean build -P build_type=release; cd ..
 </pre>
 
-（3） 访问版本查询接口获取版本信息 ```curl http://localhost:8085/trace/sys/version```
+（3） 运行 trace-service 。请参照 ```trace-service/run-local.sh``` 的启动命令行，可能需要调整 jar 的版本号。
+
+<pre>
+java -jar build/libs/basic-trace-webservice-0.0.1.jar
+或调整为：
+java -jar build/libs/basic-trace-webservice-1.0.0.jar
+</pre>
+
+（4） 访问版本查询接口获取版本信息 ```curl http://localhost:8085/trace/sys/version```
 
 <pre>
 {
-    "version": "v2.9.0",
-    "versionDetail": "v2.9.0 gcf79aeb b202008131107",
+    "version": "2.9.0",
+    "versionDetail": "2.9.0 gcf79aeb b202008131107",
     "versionCode": 20900,
     "name": "trace-service"
 }
@@ -79,12 +87,15 @@ trace-service/src/main/resources/version.properties ，重新运行。但注意�
 
 ### Spring Cloud starter
 * 注册中心，配置中心，认证中心等已略去。 trace-service 的配置改回本地 Spring Boot 配置项。
+* 来源于以下项目： [anilallewar/microservices-basics-spring-boot](https://github.com/anilallewar/microservices-basics-spring-boot) 致谢原作者，其最近更新也为 k8s 部署提供了一个方向。
+* 为了方便国内访问，正常查看配图，目前在 Gitee 做了一份克隆： [ahming/microservices-basics-spring-boot](https://gitee.com/m1024ing/microservices-basics-spring-boot)
 
 ### 测试请求演示
 
 <pre>
 cd docs/scripts/demo/
 bash curl-sys-version.sh
+bash curl-trace-statCrashLog-without-token.sh
 bash curl-trace-statCrashLog.sh
 </pre>
 
