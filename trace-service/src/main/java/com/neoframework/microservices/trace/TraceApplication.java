@@ -1,5 +1,5 @@
 
-package com.anilallewar.microservices.trace;
+package com.neoframework.microservices.trace;
 
 import com.boxue.common.database.MyBatisRepository;
 import org.mybatis.spring.annotation.MapperScan;
@@ -32,13 +32,14 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * </ol>
  *
  * @author anilallewar
+ * @author elearning team
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableResourceServer
-@MapperScan(basePackages = "com.anilallewar.microservices.trace.dao",
+@MapperScan(basePackages = "com.neoframework.microservices.trace.dao",
         annotationClass = MyBatisRepository.class)
-@ComponentScan(basePackages = {"com.anilallewar.microservices.trace", "com.boxue.common.config"
+@ComponentScan(basePackages = {"com.neoframework.microservices.trace", "com.boxue.common.config"
         // , "com.boxue.common.redis"
 })
 public class TraceApplication {

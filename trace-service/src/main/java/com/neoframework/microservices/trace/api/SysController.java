@@ -1,5 +1,5 @@
 
-package com.anilallewar.microservices.trace.api;
+package com.neoframework.microservices.trace.api;
 
 import com.boxue.common.config.VersionConfig;
 import org.slf4j.Logger;

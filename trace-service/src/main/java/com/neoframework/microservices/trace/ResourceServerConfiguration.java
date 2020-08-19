@@ -1,5 +1,5 @@
 
-package com.anilallewar.microservices.trace;
+package com.neoframework.microservices.trace;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

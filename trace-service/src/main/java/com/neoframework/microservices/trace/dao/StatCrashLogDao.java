@@ -1,5 +1,5 @@
 
-package com.anilallewar.microservices.trace.dao;
+package com.neoframework.microservices.trace.dao;
 
 import com.boxue.biz.api.trace.model.StatCrashLog;
 import com.boxue.common.database.MyBatisRepository;

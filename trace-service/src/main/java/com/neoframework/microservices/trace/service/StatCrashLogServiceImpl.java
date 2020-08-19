@@ -1,7 +1,7 @@
 
-package com.anilallewar.microservices.trace.service;
+package com.neoframework.microservices.trace.service;
 
-import com.anilallewar.microservices.trace.dao.StatCrashLogDao;
+import com.neoframework.microservices.trace.dao.StatCrashLogDao;
 import com.boxue.biz.api.trace.model.StatCrashLog;
 import com.boxue.biz.api.trace.service.StatCrashLogService;
 import org.slf4j.Logger;

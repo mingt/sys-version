@@ -31,8 +31,8 @@ task createWrapper(type: Wrapper) {
 }
 
 // Used by the Docker gradle plugin, group refers to the account under which the docker image is created
-group = 'anilallewar'
-mainClassName = 'com.anilallewar.microservices.trace.TraceApplication'
+group = 'neoframework'
+mainClassName = 'com.neoframework.microservices.trace.TraceApplication'
 
 repositories {
     mavenCentral()

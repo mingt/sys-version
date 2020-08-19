@@ -1,7 +1,7 @@
 
-package com.anilallewar.microservices.trace.api;
+package com.neoframework.microservices.trace.api;
 
-import com.anilallewar.microservices.trace.service.StatCrashLogServiceImpl;
+import com.neoframework.microservices.trace.service.StatCrashLogServiceImpl;
 import com.boxue.biz.api.trace.model.StatCrashLog;
 import com.boxue.common.api.R;
 import java.util.Date;

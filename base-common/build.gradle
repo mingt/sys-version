@@ -40,7 +40,7 @@ task createWrapper(type: Wrapper) {
 * Spring boot application.
 */
 
-group = 'anilallewar'
+group = 'neoframework'
 mainClassName = 'com.anilallewar.microservices.elearningapi.ApiApplication'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
