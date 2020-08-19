@@ -80,5 +80,13 @@ trace-service/src/main/resources/version.properties ，重新运行。但注意�
 ### Spring Cloud starter
 * 注册中心，配置中心，认证中心等已略去。 trace-service 的配置改回本地 Spring Boot 配置项。
 
+### 测试请求演示
+
+<pre>
+cd docs/scripts/demo/
+bash curl-sys-version.sh
+bash curl-trace-statCrashLog.sh
+</pre>
+
 ### 代码风格 styleguide
 详情见 [docs/styleguide/README.md](/docs/styleguide/README.md)
