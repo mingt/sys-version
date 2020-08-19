@@ -1,8 +1,8 @@
 
 package com.neoframework.microservices.trace.dao;
 
-import com.boxue.biz.api.trace.model.StatCrashLog;
-import com.boxue.common.database.MyBatisRepository;
+import com.neoframework.biz.api.trace.model.StatCrashLog;
+import com.neoframework.common.database.MyBatisRepository;
 
 @MyBatisRepository
 public interface StatCrashLogDao {

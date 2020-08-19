@@ -1,9 +1,9 @@
 
 package com.neoframework.microservices.trace.api;
 
+import com.neoframework.biz.api.trace.model.StatCrashLog;
+import com.neoframework.common.api.R;
 import com.neoframework.microservices.trace.service.StatCrashLogServiceImpl;
-import com.boxue.biz.api.trace.model.StatCrashLog;
-import com.boxue.common.api.R;
 import java.util.Date;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

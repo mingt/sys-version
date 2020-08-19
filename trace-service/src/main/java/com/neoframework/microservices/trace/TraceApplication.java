@@ -1,7 +1,7 @@
 
 package com.neoframework.microservices.trace;
 
-import com.boxue.common.database.MyBatisRepository;
+import com.neoframework.common.database.MyBatisRepository;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,15 +32,15 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * </ol>
  *
  * @author anilallewar
- * @author elearning team
+ * @author Elearning Team
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableResourceServer
 @MapperScan(basePackages = "com.neoframework.microservices.trace.dao",
         annotationClass = MyBatisRepository.class)
-@ComponentScan(basePackages = {"com.neoframework.microservices.trace", "com.boxue.common.config"
-        // , "com.boxue.common.redis"
+@ComponentScan(basePackages = {"com.neoframework.microservices.trace", "com.neoframework.common.config"
+        // , "com.neoframework.common.redis"
 })
 public class TraceApplication {
 

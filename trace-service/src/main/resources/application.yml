@@ -7,7 +7,7 @@
 mybatis:
   config-location: 'classpath:mybatis/_mybatis_config.xml'
   mapper-locations: 'classpath*:mybatis/mapper/**/*.xml'
-  type-aliases-package: 'com.thinkgem.jeesite.modules;com.boxue.elearning.api.teaching.model;com.boxue.elearning.api.space.model;com.boxue.elearning.api.trace.model'
+  type-aliases-package: 'com.thinkgem.jeesite.modules;com.neoframework.biz.api.teaching.model;com.neoframework.biz.api.trace.model'
 
 spring:
   cloud:

@@ -1,9 +1,9 @@
 
 package com.neoframework.microservices.trace.service;
 
+import com.neoframework.biz.api.trace.model.StatCrashLog;
+import com.neoframework.biz.api.trace.service.StatCrashLogService;
 import com.neoframework.microservices.trace.dao.StatCrashLogDao;
-import com.boxue.biz.api.trace.model.StatCrashLog;
-import com.boxue.biz.api.trace.service.StatCrashLogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

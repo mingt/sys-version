@@ -41,7 +41,8 @@ task createWrapper(type: Wrapper) {
 */
 
 group = 'neoframework'
-mainClassName = 'com.anilallewar.microservices.elearningapi.ApiApplication'
+// 本项目未使用
+mainClassName = 'com.neoframework.microservices.base.ApiApplication'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
