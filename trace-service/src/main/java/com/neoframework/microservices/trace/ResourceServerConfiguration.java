@@ -35,7 +35,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                         XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
                 .and()
 
-                .authorizeRequests().antMatchers("/sys/version").permitAll().anyRequest()
+                .authorizeRequests().antMatchers("/sys/version", "/statCrashLog").permitAll().anyRequest()
                 .authenticated().and().logout().permitAll().and().formLogin().permitAll().and()
                 .exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
     }
