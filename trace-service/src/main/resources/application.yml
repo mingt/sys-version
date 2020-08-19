@@ -1,0 +1,18 @@
+#logging:
+#  level:
+#     org:
+#       springframework:
+#         security: DEBUG
+
+mybatis:
+  config-location: 'classpath:mybatis/_mybatis_config.xml'
+  mapper-locations: 'classpath*:mybatis/mapper/**/*.xml'
+  type-aliases-package: 'com.thinkgem.jeesite.modules;com.boxue.elearning.api.teaching.model;com.boxue.elearning.api.space.model;com.boxue.elearning.api.trace.model'
+
+spring:
+  cloud:
+    config:
+      # 支持命令行等属性覆盖
+      allowOverride: true
+      overrideNone: true
+      overrideSystemProperties: false
