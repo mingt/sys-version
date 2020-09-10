@@ -219,3 +219,15 @@ UserDTO.java : 1 item(s)
 * EclipseFormatter.zip 6.8MB
 * intellij-javadocs.zip 2.3MB
 * FindBugs-IDEA-1.0.1.zip 7.7MB
+
+扩展参考
+=====================
+
+[demo项目展示如何集成各种Java项目的质量扫描](https://github.com/mingt/code-quality-verify-demo)
+
+    checkstyle
+    pmd/p3c
+    cpd
+    findbugs
+    jacoco
+    sonarqube
